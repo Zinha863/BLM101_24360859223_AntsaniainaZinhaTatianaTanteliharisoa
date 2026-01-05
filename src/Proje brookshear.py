@@ -9,15 +9,18 @@ while True:
     kod=input("4 haneli bir HEX kodu giriniz:").upper()
 
     #hataları kontrol eder
+    #uzunluğunu kontrol eder
     if len(kod)>4:
         print("Fazla hane girdiniz!") 
         
     elif len(kod)<4:
         print("Eksik hane girdiniz!")
-
+        
+    #harf ve sayıdan başka hane girilip girilmediğini kontrol eder
     elif any(not element.isalnum() for element in kod):
         print("Harf ve sayidan baska eleman girdiniz!")
-
+        
+    #geğerli harflerden başka harf girilip girilmediğini kontrol eder
     elif any(element not in Harf for element in kod):
         print("Yanlis harf girdiniz!(Sadece A-F girilebilir)")
     
@@ -103,4 +106,5 @@ while True:
                 
 
       
+
 
